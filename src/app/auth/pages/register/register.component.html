@@ -1,1 +1,59 @@
-<p>register works!</p>
+<div class="containerr">
+  <form class="form-signin" (ngSubmit)="register()" [formGroup]="registerForm">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+
+    <div class="form-group">
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input type="text"
+             id="inputUsername"
+             class="form-control"
+             placeholder="Username"
+             autofocus
+             formControlName="username">
+    </div>
+
+    <div class="form-group">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email"
+             id="inputEmail"
+             class="form-control"
+             placeholder="Email address"
+             autofocus
+             formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password"
+             id="inputPassword"
+             class="form-control"
+             placeholder="Password"
+             formControlName="password">
+    </div>
+
+    <div class="form-group">
+      <label for="inputPassword2" class="sr-only">Confirm Password</label>
+      <input type="password"
+             id="inputPassword2"
+             class="form-control"
+             placeholder="Confirm Password"
+             formControlName="confirmPassword">
+    </div>
+
+    <!--    terms-->
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox"
+               value="terms"
+               formControlName="terms">
+        I agree to the <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                          target="_blank">
+        terms and conditions</a>
+      </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    <p>Already have an account? <a routerLink="../login">Login</a></p>
+  </form>
+
+</div>
