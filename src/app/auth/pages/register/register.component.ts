@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -65,12 +66,14 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder,
     private authService: AuthService,
+    private router: Router
     ) { }
 
   register() {
     const {username, email, password} = this.registerForm.value;
-
     this.authService.register(username!, email!, password!);
+    this.router.navigateByUrl('/traillers/home');
+
   }
 
 
