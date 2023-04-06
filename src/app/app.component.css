@@ -1,11 +1,5 @@
-app-sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
-    z-index: 1000;
+
+
+.spacer {
+    flex: 1 1 auto;
 }
