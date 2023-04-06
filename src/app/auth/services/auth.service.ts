@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor() {
+  }
 
   login(email: string, password: string) {
     console.log('login');
@@ -23,5 +25,14 @@ export class AuthService {
     console.log('validateToken');
   }
 
+
+  validateJWT() {
+    return new Observable<boolean>(observer => {
+      setTimeout(() => {
+        observer.next(true);
+        observer.complete();
+      }, 1500);
+    });
+  }
 
 }
