@@ -1,21 +1,31 @@
-<table class="table table-striped-columns">
-  <thead>
-  <tr>
-    <th>Column 1</th>
-    <th>Column 2</th>
-    <th>Column 3</th>
-    <th>Column 4</th>
+<div class="row container-fluid">
+  <div class="col">
+    <h1>
+      <span class="badge badge-secondary">Trailers</span>
+    </h1>
 
+    <input type="text"
+            class="form-control"
+            placeholder="Search"
+            [(ngModel)]="searchText"
+            (keyup)="search(searchText)"
+            autofocus>
 
-  </tr>
-  </thead>
-  <tbody class="table-striped-columns__body" *ngFor="let t of traillers">
-    <tr *ngFor="let category of t.trailers">
-      <th>{{category['id']}}</th>
-      <td>{{category['link']}}</td>
-      <td>{{category['title']}}</td>
-      <td>{{category['category']}}</td>
-    </tr>
+    <div class="row row-cols-3" *ngFor="let trailer of traillers">
+      <div *ngFor="let t of trailer.trailers">
+        <div class="col-lg-3 col-md-4 col-sm-5 col-6 col rounded me-3">
+          <iframe width="360" height="215" [src]="t.link | safe" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+          <h4 class="d-flex">
+            <span class="badge ">{{t.title}}</span>
+            <small class="mt-1 text-muted">{{t.category}}</small>
+          </h4>
+        </div>
 
-  </tbody>
-</table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
