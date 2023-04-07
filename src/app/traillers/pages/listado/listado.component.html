@@ -1,0 +1,21 @@
+<table class="table table-striped-columns">
+  <thead>
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+    <th>Column 3</th>
+    <th>Column 4</th>
+
+
+  </tr>
+  </thead>
+  <tbody class="table-striped-columns__body" *ngFor="let t of traillers">
+    <tr *ngFor="let category of t.trailers">
+      <th>{{category['id']}}</th>
+      <td>{{category['link']}}</td>
+      <td>{{category['title']}}</td>
+      <td>{{category['category']}}</td>
+    </tr>
+
+  </tbody>
+</table>

@@ -6,12 +6,14 @@ import {SharedModule} from "../shared/shared.module";
 import {NgImageSliderModule} from "ng-image-slider";
 import {HomeComponent} from "./pages/home/home.component";
 import {CarouselComponent} from "./components/carousel/carousel.component";
+import { ListadoComponent } from './pages/listado/listado.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    ListadoComponent
   ],
   imports: [
     CommonModule,

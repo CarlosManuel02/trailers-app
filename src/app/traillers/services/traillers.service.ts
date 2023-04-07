@@ -14,47 +14,32 @@ export class TraillersService {
     {
       category: 'Action',
       trailers: [
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        }
-      ]
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '1', category: 'Action'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '2', category: 'Action'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '3', category: 'Action'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '4', category: 'Action'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '5', category: 'Action'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '6', category: 'Action'},]
     },
     {
       category: 'Comedy',
       trailers: [
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'}
-      ]
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '7', category: 'Comedy'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '8', category: 'Comedy'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '9', category: 'Comedy'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '10', category: 'Comedy'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '11', category: 'Comedy'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '12', category: 'Comedy'},]
     },
     {
       category: 'Drama',
       trailers: [
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY'}
-      ]
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '13', category: 'Drama'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '14', category: 'Drama'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '15', category: 'Drama'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '16', category: 'Drama'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '17', category: 'Drama'},
+        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '18', category: 'Drama'},]
     }
   ];
 

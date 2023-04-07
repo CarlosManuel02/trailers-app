@@ -6,3 +6,12 @@ html, body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar{
+  color: #000000;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #cdcdcd;
+  overflow-style: marquee-block;
+  appearance: menulist-button;
+}

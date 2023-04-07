@@ -12,6 +12,8 @@ export class CarouselComponent implements OnInit {
 
 
   @Input() category: Category = {trailers: []};
+  @ViewChild('scrollDiv', { read: ElementRef }) public scrollDiv!: ElementRef<HTMLElement>;
+
 
   constructor(private sanitizer: DomSanitizer) {
   }
