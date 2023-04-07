@@ -1,10 +1,7 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
+import {Category} from "../../interfaces/category.interface";
 
-interface Category {
-  category?: string;
-  trailers: any[];
-}
 
 @Component({
   selector: 'app-carousel',
@@ -15,7 +12,6 @@ export class CarouselComponent implements OnInit {
 
 
   @Input() category: Category = {trailers: []};
- @ViewChild('ms-4') carousel: ElementRef | undefined;
 
   constructor(private sanitizer: DomSanitizer) {
   }
@@ -32,15 +28,8 @@ export class CarouselComponent implements OnInit {
 
 
   next() {
-    if (!this.carousel) return;
-    const carousel = this.carousel?.nativeElement;
-    carousel.scrollLeft += 300;
-
   }
 
   prev() {
-    if (!this.carousel) return;
-    const carousel = this.carousel?.nativeElement;
-    carousel.scrollLeft -= 300;
   }
 }

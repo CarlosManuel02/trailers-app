@@ -1,9 +1,7 @@
 import {Component} from '@angular/core';
+import {Category} from "../../interfaces/category.interface";
+import {TraillersService} from "../../services/traillers.service";
 
-interface Category {
-  category?: string;
-  trailers: any[];
-}
 
 @Component({
   selector: 'app-home',
@@ -11,32 +9,11 @@ interface Category {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  constructor(private ts: TraillersService) {
+    this.categories = ts.categories;
+  }
 
-  categories: Category[] = [
-    {
-      category: 'Action',
-      trailers: [
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        },
-        {
-          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
-        }
-      ]
-    },
-  ];
+  categories: Category[] = []
 
 
 }

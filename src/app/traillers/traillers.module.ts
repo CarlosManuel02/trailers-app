@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 
-import { TraillersRoutingModule } from './traillers-routing.module';
-import { HomeComponent } from './pages/home/home.component';
+import {TraillersRoutingModule} from './traillers-routing.module';
 import {SharedModule} from "../shared/shared.module";
-import { CarouselComponent } from './components/carousel/carousel.component';
 import {NgImageSliderModule} from "ng-image-slider";
+import {HomeComponent} from "./pages/home/home.component";
+import {CarouselComponent} from "./components/carousel/carousel.component";
 
 
 @NgModule({
@@ -21,4 +21,5 @@ import {NgImageSliderModule} from "ng-image-slider";
     NgImageSliderModule
   ]
 })
-export class TraillersModule { }
+export class TraillersModule {
+}
