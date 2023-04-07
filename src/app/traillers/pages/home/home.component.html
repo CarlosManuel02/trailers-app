@@ -2,14 +2,49 @@
   <div class="col d-flex">
     <app-sidebar></app-sidebar>
 
-    <div class="hero">
-      <h1 class="title">The title of the page</h1>
-      <div class="content">
-        <p>Some content</p>
+    <div class="col">
+
+      <div class="hero-login">
+        <h1>
+          Trailers
+        </h1>
+        <div class="container">
+          <div class="search">
+            <input type="text" placeholder="Search">
+          </div>
+
+          <div class="login">
+            <button routerLink="/auth/login">Login</button>
+          </div>
+          <div class="register">
+            <button routerLink="/auth/register">Register</button>
+          </div>
+        </div>
+
       </div>
-      <div class="footer">
-        <p>Some footer</p>
-    </div>
+
+      <div class="hero">
+        <h1 class="title">The title of the page</h1>
+        <div class="content">
+          <p>Some content</p>
+        </div>
+        <div class="footer">
+          <p>Some footer</p>
+        </div>
+      </div>
+
+      <div class="mt-5 carousel">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Movies</h3>
+          </div>
+          <div class="card-body carousel-list" *ngFor="let category of categories">
+            <app-carousel [category]="category"></app-carousel>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
