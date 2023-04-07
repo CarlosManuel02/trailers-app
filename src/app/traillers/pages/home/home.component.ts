@@ -21,6 +21,18 @@ export class HomeComponent {
         },
         {
           link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
+        },
+        {
+          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
+        },
+        {
+          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
+        },
+        {
+          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
+        },
+        {
+          link: 'https://www.youtube.com/embed/vhumOLNSSJY' // Youtube url
         }
       ]
     },
