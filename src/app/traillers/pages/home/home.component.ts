@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Category} from "../../interfaces/category.interface";
+import {Trailer} from "../../interfaces/category.interface";
 import {TraillersService} from "../../services/traillers.service";
 
 
@@ -13,7 +13,7 @@ export class HomeComponent {
     this.categories = ts.categories;
   }
 
-  categories: Category[] = []
+  categories: Trailer[] = []
 
 
 }

@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import {TraillersRoutingModule} from './traillers-routing.module';
 import {SharedModule} from "../shared/shared.module";
@@ -20,6 +20,7 @@ import {FormsModule} from "@angular/forms";
     TraillersRoutingModule,
     SharedModule,
     FormsModule,
+    NgOptimizedImage,
   ]
 })
 export class TraillersModule {

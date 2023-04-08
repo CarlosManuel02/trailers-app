@@ -1,12 +1,11 @@
 <!--carousel-->
 <div class="container">
-  <h1>{{category.category}}</h1>
+  <h1>{{category}}</h1>
 
   <div class="video-carousel-container">
     <div class="video-carousel">
-      <div class="video-container" *ngFor="let video of category.trailers">
-        <iframe width="360" height="215" [src]="video.link | safe" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
+      <div class="video-container" *ngFor="let video of trailer">
+        <img width="360" height="215" [src]="video.img | safe" [alt]="video.titulo">
 
       </div>
     </div>
