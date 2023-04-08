@@ -8,6 +8,7 @@ import {HomeComponent} from "./pages/home/home.component";
 import {CarouselComponent} from "./components/carousel/carousel.component";
 import { ListadoComponent } from './pages/listado/listado.component';
 import {FormsModule} from "@angular/forms";
+import {NzTableModule} from "ng-zorro-antd/table";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {FormsModule} from "@angular/forms";
     SharedModule,
     NgOptimizedImage,
     NgImageSliderModule,
-    FormsModule
+    FormsModule,
+    NzTableModule
   ]
 })
 export class TraillersModule {

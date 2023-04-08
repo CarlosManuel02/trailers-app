@@ -6,9 +6,9 @@ import {ListadoComponent} from "./pages/listado/listado.component";
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    // component: HomeComponent,
     children: [
-      // {path: 'home', component: HomeComponent},
+      {path: 'home', component: HomeComponent},
       {path: 'list', component: ListadoComponent},
       {path: '**', redirectTo: 'home'}
 
