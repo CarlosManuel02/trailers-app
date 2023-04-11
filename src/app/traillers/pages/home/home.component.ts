@@ -14,7 +14,7 @@ interface TrailerCategory {
 })
 export class HomeComponent implements OnInit {
   constructor(private ts: TraillersService) {
-    this.trailer = ts.categories;
+    this.categories = ts.trailerCategory;
   }
 
   categories: TrailerCategory[] = []
@@ -22,15 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // map the trailer to category and trailer
-    this.trailer.forEach(trailer => {
-      const category = this.categories.find(cat => cat.category === trailer.category); // find the category
-      if (category) {
-        category.trailer.push(trailer);
-      } else {
-        this.categories.push({category: trailer.category, trailer: [trailer]});
-      }
-    });
-    console.log(this.categories);
+    console.log(this.categories)
   }
 
 

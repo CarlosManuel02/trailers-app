@@ -2,14 +2,17 @@ import {Injectable} from '@angular/core';
 import {Trailer} from "../interfaces/category.interface";
 import {HttpClient} from "@angular/common/http";
 
+interface TrailerCategory {
+  category: string;
+  trailer: Trailer[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class TraillersService {
 
-  constructor(private http: HttpClient) {
-  }
-
+  private trailer: TrailerCategory[] = []
   private _categories: Trailer[] = [
     {
       titulo: 'Avengers: EndGame',
@@ -263,8 +266,27 @@ export class TraillersService {
     }
   ];
 
+
+  constructor(private http: HttpClient) {
+    this._categories.forEach(trailer => {
+      const category = this.trailer.find((item) => item.category === trailer.category);
+      if (category) {
+        category.trailer.push(trailer);
+      } else {
+        this.trailer.push({
+          category: trailer.category,
+          trailer: [trailer]
+        });
+      }
+    });
+  }
+
   get categories() {
     return [...this._categories];
+  }
+
+  get trailerCategory() {
+    return [...this.trailer];
   }
 
   getTrailers(category: string) {
@@ -285,22 +307,6 @@ export class TraillersService {
   }
 
   updateTrailer(category: string, id: string, trailer: string) {
-
-  }
-
-  getCategories() {
-
-  }
-
-  addCategory(category: string) {
-
-  }
-
-  deleteCategory(category: string) {
-
-  }
-
-  updateCategory(category: string, newCategory: string) {
 
   }
 
