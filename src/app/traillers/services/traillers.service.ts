@@ -232,7 +232,7 @@ export class TraillersService {
         'Gwyneth Paltrow',
         'Josh Brolin'],
       reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
-      img: '',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
     },
@@ -257,7 +257,7 @@ export class TraillersService {
         'Gwyneth Paltrow',
         'Josh Brolin'],
       reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
-      img: '',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Drama'
     }

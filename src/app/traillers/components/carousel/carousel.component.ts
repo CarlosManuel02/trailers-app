@@ -3,6 +3,11 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {Trailer} from "../../interfaces/category.interface";
 
 
+interface TrailerCategory {
+  category: string;
+  trailer: Trailer[];
+}
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -10,8 +15,8 @@ import {Trailer} from "../../interfaces/category.interface";
 })
 export class CarouselComponent implements OnInit {
 
-  category: string = 'trailers';
-  @Input() trailer: Trailer[] = [];
+
+  @Input() trailer!: TrailerCategory;
   @ViewChild('scrollDiv', { read: ElementRef }) public scrollDiv!: ElementRef<HTMLElement>;
 
 
@@ -21,9 +26,7 @@ export class CarouselComponent implements OnInit {
 
 
   ngOnInit() {
-    this.trailer.map(trailer => {
-      this.category = trailer.category;
-    })
+
   }
 
 
