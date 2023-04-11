@@ -18,7 +18,7 @@ export class ListadoComponent {
   }
 
   get traillers() {
-    return this.ts.categories;
+    return this.ts.trailers;
   }
 
   openModal() {

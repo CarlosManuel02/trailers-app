@@ -12,8 +12,8 @@ interface TrailerCategory {
 })
 export class TraillersService {
 
-  private trailer: TrailerCategory[] = []
-  private _categories: Trailer[] = [
+  private categories: TrailerCategory[] = []
+  private _trailers: Trailer[] = [
     {
       id: '1',
       titulo: 'Avengers: EndGame',
@@ -277,12 +277,12 @@ export class TraillersService {
 
 
   constructor(private http: HttpClient) {
-    this._categories.forEach(trailer => {
-      const category = this.trailer.find((item) => item.category === trailer.category);
+    this._trailers.forEach(trailer => {
+      const category = this.categories.find((item) => item.category === trailer.category);
       if (category) {
         category.trailer.push(trailer);
       } else {
-        this.trailer.push({
+        this.categories.push({
           category: trailer.category,
           trailer: [trailer]
         });
@@ -290,12 +290,12 @@ export class TraillersService {
     });
   }
 
-  get categories() {
-    return [...this._categories];
+  get trailers() {
+    return [...this._trailers];
   }
 
   get trailerCategory() {
-    return [...this.trailer];
+    return [...this.categories];
   }
 
   getTrailers(category: string) {
@@ -306,7 +306,7 @@ export class TraillersService {
   }
 
   getTrailerById(id: string) {
-    return this._categories.find(trailer => trailer.id === id)
+    return this._trailers.find(trailer => trailer.id === id)
   }
 
   addTrailer(category: string, trailer: string) {
