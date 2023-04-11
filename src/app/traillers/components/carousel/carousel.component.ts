@@ -1,7 +1,12 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
-import {Category} from "../../interfaces/category.interface";
+import {Trailer} from "../../interfaces/category.interface";
 
+
+interface TrailerCategory {
+  category: string;
+  trailer: Trailer[];
+}
 
 @Component({
   selector: 'app-carousel',
@@ -11,21 +16,17 @@ import {Category} from "../../interfaces/category.interface";
 export class CarouselComponent implements OnInit {
 
 
-  @Input() category: Category = {trailers: []};
+  @Input() trailer!: TrailerCategory;
   @ViewChild('scrollDiv', { read: ElementRef }) public scrollDiv!: ElementRef<HTMLElement>;
 
 
   constructor(private sanitizer: DomSanitizer) {
+
   }
 
 
   ngOnInit() {
-    // this.category.trailers.map(trailer => {
-    //   const url = trailer.link.split('=');
-    //   const id = url[1];
-    //   console.log(url)
-    //   trailer.link = `https://www.youtube.com/embed/${id}`
-    // });
+
   }
 
 

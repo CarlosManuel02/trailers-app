@@ -18,7 +18,7 @@ export class ListadoComponent {
   }
 
   get traillers() {
-    return this.ts.categories;
+    return this.ts.trailerCategory;
   }
 
   openModal() {
@@ -28,13 +28,9 @@ export class ListadoComponent {
   search(searchText: string) {
     this.searchText = searchText;
 
-    this.traillers.map((category) => {
-      category.trailers?.map((trailer) => {
-        if (trailer.category.includes(searchText)) {
-          this.foundTraillers.push(trailer)
-        } else {
-          console.log(false)
-        }
+    this.foundTraillers = this.traillers.map(trailer => {
+      trailer.trailer.filter(trailer => {
+        return trailer.titulo.toLowerCase().includes(this.searchText.toLowerCase());
       })
     })
 

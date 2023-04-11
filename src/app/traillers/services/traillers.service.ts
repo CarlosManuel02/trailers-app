@@ -1,50 +1,301 @@
 import {Injectable} from '@angular/core';
-import {Category} from "../interfaces/category.interface";
+import {Trailer} from "../interfaces/category.interface";
 import {HttpClient} from "@angular/common/http";
+
+interface TrailerCategory {
+  category: string;
+  trailer: Trailer[];
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class TraillersService {
 
-  constructor(private http: HttpClient) {
-  }
-
-  private _categories: Category[] = [
+  private categories: TrailerCategory[] = []
+  private _trailers: Trailer[] = [
     {
-      category: 'Action',
-      trailers: [
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '1', category: 'Action'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '2', category: 'Action'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '3', category: 'Action'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '4', category: 'Action'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '5', category: 'Action'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '6', category: 'Action'},]
+      id: '1',
+      titulo: 'Avengers: EndGame',
+      año: new Date('2019-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Después de los eventos devastadores de Avengers: Infinity War (2018), el universo está en ruinas debido a las acciones de Thanos. Con la ayuda de los aliados restantes, los Vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar las consecuencias.',
+      img: 'https://img.youtube.com/vi/TcMBFSGVi1c/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/TcMBFSGVi1c`,
+      category: 'Acción'
     },
     {
-      category: 'Comedy',
-      trailers: [
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '7', category: 'Comedy'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '8', category: 'Comedy'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '9', category: 'Comedy'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '10', category: 'Comedy'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '11', category: 'Comedy'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '12', category: 'Comedy'},]
+      id: '2',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
     },
     {
-      category: 'Drama',
-      trailers: [
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '13', category: 'Drama'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '14', category: 'Drama'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '15', category: 'Drama'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '16', category: 'Drama'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '17', category: 'Drama'},
-        {link: 'https://www.youtube.com/embed/vhumOLNSSJY', title: 'Avengers: Endgame', id: '18', category: 'Drama'},]
+      id: '3',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    { id: '4',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '5',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '6',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '7',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '8',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '9',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    {
+      id: '10',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Drama'
     }
   ];
 
-  get categories() {
-    return [...this._categories];
+
+  constructor(private http: HttpClient) {
+    this._trailers.forEach(trailer => {
+      const category = this.categories.find((item) => item.category === trailer.category);
+      if (category) {
+        category.trailer.push(trailer);
+      } else {
+        this.categories.push({
+          category: trailer.category,
+          trailer: [trailer]
+        });
+      }
+    });
+  }
+
+  get trailers() {
+    return [...this._trailers];
+  }
+
+  get trailerCategory() {
+    return [...this.categories];
   }
 
   getTrailers(category: string) {
@@ -54,7 +305,8 @@ export class TraillersService {
 
   }
 
-  getTrailerById(category: string, id: string) {
+  getTrailerById(id: string) {
+    return this._trailers.find(trailer => trailer.id === id)
   }
 
   addTrailer(category: string, trailer: string) {
@@ -65,22 +317,6 @@ export class TraillersService {
   }
 
   updateTrailer(category: string, id: string, trailer: string) {
-
-  }
-
-  getCategories() {
-
-  }
-
-  addCategory(category: string) {
-
-  }
-
-  deleteCategory(category: string) {
-
-  }
-
-  updateCategory(category: string, newCategory: string) {
 
   }
 
