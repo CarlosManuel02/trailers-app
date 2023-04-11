@@ -2,7 +2,7 @@
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 5px;
-  margin: 20px;
+  /*margin: 20px;*/
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   height: 600px;
   width: 100%;
@@ -32,7 +32,7 @@
   background: linear-gradient(to bottom, #1F1C18, #8E0E00);
   padding: 20px;
   border-radius: 5px;
-  margin: 20px;
+  /*margin: 20px;*/
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   height: 600px;
   width: 100%;
