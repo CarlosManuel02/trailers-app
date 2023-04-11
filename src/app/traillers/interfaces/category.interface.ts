@@ -5,7 +5,7 @@ export interface Trailer {
   año: Date;
   director: string;
   actores: string[];
-  reseña: string
+  descripcion: string
   img: string;
   link: string;
   category: string;

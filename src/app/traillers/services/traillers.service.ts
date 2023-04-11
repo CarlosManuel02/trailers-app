@@ -35,7 +35,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Después de los eventos devastadores de Avengers: Infinity War (2018), el universo está en ruinas debido a las acciones de Thanos. Con la ayuda de los aliados restantes, los Vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar las consecuencias.',
+      descripcion: 'Después de los eventos devastadores de Avengers: Infinity War (2018), el universo está en ruinas debido a las acciones de Thanos. Con la ayuda de los aliados restantes, los Vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar las consecuencias.',
       img: 'https://img.youtube.com/vi/TcMBFSGVi1c/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/TcMBFSGVi1c`,
       category: 'Acción'
@@ -61,7 +61,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -87,7 +87,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -112,7 +112,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -138,7 +138,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -164,7 +164,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -190,7 +190,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -216,7 +216,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -242,7 +242,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Acción'
@@ -268,7 +268,7 @@ export class TraillersService {
         'Bradley Cooper',
         'Gwyneth Paltrow',
         'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      descripcion: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
       img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
       link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
       category: 'Drama'
@@ -305,7 +305,8 @@ export class TraillersService {
 
   }
 
-  getTrailerById(category: string, id: string) {
+  getTrailerById(id: string) {
+    return this._categories.find(trailer => trailer.id === id)
   }
 
   addTrailer(category: string, trailer: string) {
