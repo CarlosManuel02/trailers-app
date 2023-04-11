@@ -15,6 +15,7 @@ export class TraillersService {
   private trailer: TrailerCategory[] = []
   private _categories: Trailer[] = [
     {
+      id: '1',
       titulo: 'Avengers: EndGame',
       año: new Date('2019-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -40,6 +41,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '2',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -65,6 +67,32 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '3',
+      titulo: 'Avengers: Infinity War',
+      año: new Date('2018-04-26'),
+      director: 'Anthony Russo, Joe Russo',
+      actores: ['Robert Downey Jr.',
+        'Chris Evans',
+        'Mark Ruffalo',
+        'Chris Hemsworth',
+        'Scarlett Johansson',
+        'Jeremy Renner',
+        'Don Cheadle', '' +
+        'Paul Rudd',
+        'Brie Larson',
+        'Karen Gillan',
+        'Danai Gurira',
+        'Benedict Wong',
+        'Jon Favreau',
+        'Bradley Cooper',
+        'Gwyneth Paltrow',
+        'Josh Brolin'],
+      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
+      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
+      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
+      category: 'Acción'
+    },
+    { id: '4',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -90,6 +118,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '5',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -115,6 +144,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '6',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -140,6 +170,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '7',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -165,6 +196,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '8',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -190,6 +222,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
+      id: '9',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
@@ -215,31 +248,7 @@ export class TraillersService {
       category: 'Acción'
     },
     {
-      titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
-      director: 'Anthony Russo, Joe Russo',
-      actores: ['Robert Downey Jr.',
-        'Chris Evans',
-        'Mark Ruffalo',
-        'Chris Hemsworth',
-        'Scarlett Johansson',
-        'Jeremy Renner',
-        'Don Cheadle', '' +
-        'Paul Rudd',
-        'Brie Larson',
-        'Karen Gillan',
-        'Danai Gurira',
-        'Benedict Wong',
-        'Jon Favreau',
-        'Bradley Cooper',
-        'Gwyneth Paltrow',
-        'Josh Brolin'],
-      reseña: 'Los Vengadores y sus aliados deben estar dispuestos a sacrificarlo todo en un intento por derrotar al poderoso Thanos antes de que su incursión en el espacio y el tiempo ponga fin a la existencia del universo.',
-      img: 'https://img.youtube.com/vi/6ZfuNTqbHE8/maxresdefault.jpg',
-      link: `https://www.youtube.com/embed/6ZfuNTqbHE8`,
-      category: 'Acción'
-    },
-    {
+      id: '10',
       titulo: 'Avengers: Infinity War',
       año: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',

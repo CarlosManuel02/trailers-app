@@ -1,5 +1,6 @@
 
 export interface Trailer {
+  id?: string;
   titulo: string;
   año: Date;
   director: string;
