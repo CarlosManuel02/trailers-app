@@ -20,6 +20,12 @@ const routes: Routes = [
         canActivate: [ValidarTokenGuard],
         component: TraillersComponent,
       },
+      {
+        path: 'admin',
+        canLoad: [ValidarTokenGuard],
+        canActivate: [ValidarTokenGuard],
+        loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule),
+      },
       {path: '**', redirectTo: 'home'}
 
     ]

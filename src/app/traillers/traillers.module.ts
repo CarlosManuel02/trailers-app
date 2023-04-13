@@ -17,7 +17,7 @@ import { TraillersComponent } from './pages/traillers/traillers.component';
     CarouselComponent,
     ListadoComponent,
     DetailComponent,
-    TraillersComponent
+    TraillersComponent,
   ],
   imports: [
     CommonModule,
