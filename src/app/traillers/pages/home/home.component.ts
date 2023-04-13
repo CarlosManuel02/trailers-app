@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Trailer} from "../../interfaces/category.interface";
 import {TraillersService} from "../../services/traillers.service";
+import {TrailerCategory} from "../../interfaces/trailerCategory.interface";
 
 
 @Component({
@@ -10,9 +11,16 @@ import {TraillersService} from "../../services/traillers.service";
 })
 export class HomeComponent implements OnInit {
 
-
-  ngOnInit() {
+  constructor(private ts: TraillersService) {
+    this.categories = ts.trailerCategory;
   }
 
+  categories: TrailerCategory[] = []
+  trailer: Trailer[] = []
+
+  ngOnInit(): void {
+    // map the trailer to category and trailer
+    console.log(this.categories)
+  }
 
 }

@@ -20,8 +20,30 @@
       </div>
 
       <div class="hero">
-        <button routerLink="../traillers">Trailers</button>
+        <h1>
+          Trailers
+        </h1>
+        <div class="mt-5 carousel">
+
+          <div class="">
+            <h3 class="card-title">Movies</h3>
+          </div>
+          <div class="card-body carousel-list">
+            <app-carousel [trailer]="categories[0]"></app-carousel>
+
+          </div>
+
+          <div class="view-more">
+            <button routerLink="../traillers"
+              class="btn btn-primary btn-lg btn-block">
+              View More
+            </button>
+          </div>
+
+        </div>
+
       </div>
+
 
 
 
