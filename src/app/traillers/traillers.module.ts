@@ -8,6 +8,7 @@ import {CarouselComponent} from "./components/carousel/carousel.component";
 import { ListadoComponent } from './pages/listado/listado.component';
 import {FormsModule} from "@angular/forms";
 import { DetailComponent } from './pages/detail/detail.component';
+import { TraillersComponent } from './pages/traillers/traillers.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DetailComponent } from './pages/detail/detail.component';
     HomeComponent,
     CarouselComponent,
     ListadoComponent,
-    DetailComponent
+    DetailComponent,
+    TraillersComponent
   ],
   imports: [
     CommonModule,

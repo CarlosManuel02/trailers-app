@@ -9,8 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    canLoad: [ValidarTokenGuard],
-    canActivate: [ValidarTokenGuard],
+
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
