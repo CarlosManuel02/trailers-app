@@ -1,11 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Trailer} from "../interfaces/category.interface";
 import {HttpClient} from "@angular/common/http";
+import { TrailerCategory } from '../interfaces/trailerCategory.interface';
 
-interface TrailerCategory {
-  category: string;
-  trailer: Trailer[];
-}
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,10 @@
+<div class="mt-5 carousel">
+
+  <div class="">
+    <h3 class="card-title">Movies</h3>
+  </div>
+  <div class="card-body carousel-list" *ngFor="let cate of categories">
+    <app-carousel [trailer]="cate"></app-carousel>
+
+  </div>
+</div>
