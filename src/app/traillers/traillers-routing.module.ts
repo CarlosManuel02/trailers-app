@@ -5,6 +5,7 @@ import {ListadoComponent} from "./pages/listado/listado.component";
 import {DetailComponent} from "./pages/detail/detail.component";
 import {TraillersComponent} from "./pages/traillers/traillers.component";
 import {ValidarTokenGuard} from "../guards/validar-token.guard";
+import {ValidarAdminGuard} from "../guards/validar-admin.guard";
 
 const routes: Routes = [
   {
@@ -22,8 +23,8 @@ const routes: Routes = [
       },
       {
         path: 'admin',
-        canLoad: [ValidarTokenGuard],
-        canActivate: [ValidarTokenGuard],
+        canLoad: [ValidarAdminGuard],
+        canActivate: [ValidarAdminGuard],
         loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule),
       },
       {path: '**', redirectTo: 'home'}

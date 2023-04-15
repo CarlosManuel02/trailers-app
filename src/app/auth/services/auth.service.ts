@@ -9,6 +9,14 @@ export class AuthService {
   constructor() {
   }
 
+  private user = {
+    userName: 'asas',
+    email: '1234@test.test',
+    password: 123456,
+    token: '123456789',
+    isAdmin: false
+  }
+
   login(email: string, password: string) {
     console.log('login');
   }
@@ -21,8 +29,18 @@ export class AuthService {
     console.log('register');
   }
 
-  validateToken() {
-    console.log('validateToken');
+  validateAdminAndToken() {
+    return new Observable<boolean>(observer => {
+      if (this.user.isAdmin) {
+        console.log("You are an ADMIN")
+        observer.next(true);
+        observer.complete();
+      } else {
+        console.log("You are NOT an ADMIN")
+        observer.next(false);
+        observer.complete();
+      }
+    })
   }
 
 

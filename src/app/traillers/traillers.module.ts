@@ -9,6 +9,7 @@ import { ListadoComponent } from './pages/listado/listado.component';
 import {FormsModule} from "@angular/forms";
 import { DetailComponent } from './pages/detail/detail.component';
 import { TraillersComponent } from './pages/traillers/traillers.component';
+import {AuthModule} from "../auth/auth.module";
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { TraillersComponent } from './pages/traillers/traillers.component';
     TraillersRoutingModule,
     SharedModule,
     FormsModule,
+    AuthModule
   ]
 })
 export class TraillersModule {
