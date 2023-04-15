@@ -5,15 +5,20 @@
     </h1>
 
     <input type="text"
-            class="form-control"
-            placeholder="Search"
-            [(ngModel)]="searchText"
-            (keyup)="search(searchText)"
-            autofocus>
+           class="form-control"
+           placeholder="Search"
+           autofocus
+           [(ngModel)]="searchText"
+           (keyup)="buscarTrailers()">
 
-    <div class="row row-cols-3" *ngFor="let t of traillers">
-      <div *ngFor="let trailer of t.trailer">
-        <div class="col-lg-3 col-md-4 col-sm-5 col-6 col rounded me-3">
+
+    <div *ngIf="noResults" class="alert alert-warning" role="alert">
+      No results found.
+    </div>
+
+    <div class="row row-cols-3" *ngFor="let trailerCategory of foundTraillers">
+      <div *ngFor="let trailer of trailerCategory.trailer">
+        <div class="t-container col-lg-3 col-md-4 col-sm-5 col-6 col rounded me-3">
           <img width="290" height="215"
                [src]="trailer.img | safe"
                class="rounded-2 mt-2"
@@ -21,12 +26,12 @@
                routerLink="../detail/{{trailer.id}}">
           <h4 class="d-flex">
             <span class="badge ">{{trailer.titulo}}</span>
-            <small class="mt-1 text-muted">{{trailer.category}}</small>
+            <small class="badge text-white">{{trailer.year.getFullYear()}}</small>
           </h4>
         </div>
-
       </div>
     </div>
+
 
   </div>
 </div>

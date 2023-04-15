@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {TraillersService} from "../../services/traillers.service";
+import {Trailer} from "../../interfaces/category.interface";
+import {TrailerCategory} from "../../interfaces/trailerCategory.interface";
 
 @Component({
   selector: 'app-listado',
@@ -9,32 +11,42 @@ import {TraillersService} from "../../services/traillers.service";
 export class ListadoComponent {
   isModalOpen = false;
   searchText: string = '';
-  foundTraillers: any[] = [];
+  foundTraillers: TrailerCategory[] = [];
+  traillers: TrailerCategory[] = [];
 
   constructor(
     private ts: TraillersService
   ) {
-    this.foundTraillers
+    this.traillers = this.ts.trailerCategory;
   }
 
-  get traillers() {
-    return this.ts.trailerCategory;
-  }
 
   openModal() {
     this.isModalOpen = true;
   }
 
-  search(searchText: string) {
-    this.searchText = searchText;
+  noResults: boolean = false;
 
-    this.foundTraillers = this.traillers.map(trailer => {
-      trailer.trailer.filter(trailer => {
-        return trailer.titulo.toLowerCase().includes(this.searchText.toLowerCase());
-      })
-    })
-
-
+  buscarTrailers() {
+    if (this.searchText === '') {
+      this.foundTraillers = this.traillers;
+    } else {
+      this.foundTraillers = [];
+      for (const trailerCategory of this.traillers) {
+        const trailers = trailerCategory.trailer.filter(trailer =>
+          trailer.titulo.toLowerCase().includes(this.searchText.toLowerCase()) ||
+          trailer.year.getFullYear().toString().includes(this.searchText)
+        );
+        if (trailers.length > 0) {
+          this.foundTraillers.push({
+            category: trailerCategory.category,
+            trailer: trailers
+          });
+        }
+      }
+      this.noResults = this.foundTraillers.length === 0;
+    }
   }
+
 
 }
