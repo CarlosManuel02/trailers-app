@@ -14,7 +14,7 @@ export class TraillersService {
     {
       id: '1',
       titulo: 'Avengers: EndGame',
-      año: new Date('2019-04-26'),
+      year: new Date('2019-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -40,7 +40,7 @@ export class TraillersService {
     {
       id: '2',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -66,7 +66,7 @@ export class TraillersService {
     {
       id: '3',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -91,7 +91,7 @@ export class TraillersService {
     },
     { id: '4',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -117,7 +117,7 @@ export class TraillersService {
     {
       id: '5',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -143,7 +143,7 @@ export class TraillersService {
     {
       id: '6',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -169,7 +169,7 @@ export class TraillersService {
     {
       id: '7',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -195,7 +195,7 @@ export class TraillersService {
     {
       id: '8',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -221,7 +221,7 @@ export class TraillersService {
     {
       id: '9',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',
@@ -247,7 +247,7 @@ export class TraillersService {
     {
       id: '10',
       titulo: 'Avengers: Infinity War',
-      año: new Date('2018-04-26'),
+      year: new Date('2018-04-26'),
       director: 'Anthony Russo, Joe Russo',
       actores: ['Robert Downey Jr.',
         'Chris Evans',

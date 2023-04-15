@@ -2,7 +2,7 @@
 export interface Trailer {
   id?: string;
   titulo: string;
-  año: Date;
+  year: Date;
   director: string;
   actores: string[];
   descripcion: string
