@@ -19,6 +19,5 @@ export class TraillersComponent implements OnInit {
 
   ngOnInit(): void {
     // map the trailer to category and trailer
-    console.log(this.categories)
   }
 }
