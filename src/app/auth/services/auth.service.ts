@@ -14,7 +14,7 @@ export class AuthService {
     email: '1234@test.test',
     password: 123456,
     token: '123456789',
-    isAdmin: false
+    isAdmin: true
   }
 
   login(email: string, password: string) {
