@@ -9,9 +9,9 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children:[
-      {path: 'edit-update:id', component: AgregarEditarComponent},
+      {path: 'edit-update/:id', component: AgregarEditarComponent},
       {path: 'add', component: AgregarEditarComponent},
-      {path: '**', redirectTo: 'add'}
+      {path: '**', redirectTo: 'edit-update'}
 
     ]
   }
