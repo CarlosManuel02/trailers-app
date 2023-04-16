@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // map the trailer to category and trailer
-    console.log(this.categories)
+    // console.log(this.categories)
   }
 
 }
