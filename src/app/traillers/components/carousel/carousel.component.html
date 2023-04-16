@@ -1,22 +1,22 @@
-<!--carousel-->
 <div class="container">
   <h1>{{trailer.category}}</h1>
 
-  <div class="video-carousel-container">
+  <div class="video-carousel-container" #carouselContainer>
+    <button class="carousel-btn prev-btn" (click)="prev()">
+      <i class="bi bi-arrow-bar-left"></i>
+    </button>
+
     <div class="video-carousel">
       <div class="video-container" *ngFor="let video of trailer.trailer; let x =  index">
-          <div class="vid-container"
-               routerLink="../detail/{{video.id}}">
-            <img class="rounded"
-                 routerLink="../detail/{{video.id}}"
-                 width="360" height="215"
-                 [src]="video.img | safe"
-                 [alt]="video.titulo">
-            <p routerLink="../detail/{{video.id}}" class="text-center">{{video.titulo}}</p>
-          </div>
+        <div class="vid-container" routerLink="../detail/{{video.id}}">
+          <img class="rounded" routerLink="../detail/{{video.id}}" width="360" height="215" [src]="video.img | safe" [alt]="video.titulo">
+          <p routerLink="../detail/{{video.id}}" class="text-center">{{video.titulo}}</p>
+        </div>
       </div>
     </div>
+
+    <button class="carousel-btn next-btn" (click)="next()">
+      <i class="bi bi-arrow-bar-right"></i>
+    </button>
   </div>
-
-
 </div>
