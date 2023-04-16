@@ -17,6 +17,10 @@ export class AuthService {
     isAdmin: true
   }
 
+  get user$() {
+    return this.user;
+  }
+
   login(email: string, password: string) {
     console.log('login');
   }
