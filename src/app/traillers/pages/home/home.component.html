@@ -19,18 +19,15 @@
 
       </div>
 
-      <div class="mt-5 carousel">
+      <div class="carousel">
 
         <h3>
           Trailers
         </h3>
 
-        <div class="container-fluid">
+        <div class="container">
           <app-carousel [trailer]="categories[0]"></app-carousel>
-        </div>
-
-
-        <div class="view-more">
+          <app-carousel [trailer]="categories[1]"></app-carousel>
           <button routerLink="../traillers"
                   class="btn btn-primary btn-lg btn-block">
             View More
