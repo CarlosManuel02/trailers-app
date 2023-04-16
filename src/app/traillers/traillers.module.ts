@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { DetailComponent } from './pages/detail/detail.component';
 import { TraillersComponent } from './pages/traillers/traillers.component';
 import {AuthModule} from "../auth/auth.module";
+import { AccountComponent } from './pages/account/account.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {AuthModule} from "../auth/auth.module";
     ListadoComponent,
     DetailComponent,
     TraillersComponent,
+    AccountComponent,
   ],
   imports: [
     CommonModule,

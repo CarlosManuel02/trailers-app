@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './pages/home/home.component';
 import {ListadoComponent} from "./pages/listado/listado.component";
 import {DetailComponent} from "./pages/detail/detail.component";
 import {TraillersComponent} from "./pages/traillers/traillers.component";
 import {ValidarTokenGuard} from "../guards/validar-token.guard";
 import {ValidarAdminGuard} from "../guards/validar-admin.guard";
+import {AccountComponent} from "./pages/account/account.component";
 
 const routes: Routes = [
   {
@@ -13,13 +14,16 @@ const routes: Routes = [
     // component: HomeComponent,
     children: [
       {path: 'home', component: HomeComponent},
-      {path: 'list', component: ListadoComponent},
-      {path: 'detail/:id', component: DetailComponent},
       {
-        path: 'traillers',
+        path: '',
         canLoad: [ValidarTokenGuard],
         canActivate: [ValidarTokenGuard],
-        component: TraillersComponent,
+        children: [
+          {path: 'detail/:id', component: DetailComponent},
+          {path: 'account', component: AccountComponent},
+          {path: 'traillers', component: TraillersComponent,},
+          {path: 'list', component: ListadoComponent},
+        ]
       },
       {
         path: 'admin',
@@ -37,4 +41,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TraillersRoutingModule { }
+export class TraillersRoutingModule {
+}
