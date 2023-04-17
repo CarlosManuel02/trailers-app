@@ -23,11 +23,11 @@
           <img width="290" height="215"
                [src]="trailer.img | safe"
                class="rounded-2 mt-2"
-               [alt]="trailer.titulo"
+               [alt]="trailer.Titulo"
                routerLink="../detail/{{trailer.id}}">
           <h4 class="d-flex">
-            <span class="badge ">{{trailer.titulo}}</span>
-            <small class="badge text-white">{{trailer.year.getFullYear()}}</small>
+            <span class="badge ">{{trailer.Titulo}}</span>
+            <small class="badge text-white">{{trailer.Lanzamiento.getFullYear()}}</small>
           </h4>
         </div>
       </div>

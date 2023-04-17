@@ -1,12 +1,12 @@
 
 export interface Trailer {
   id?: string;
-  titulo: string;
-  year: Date;
-  director: string;
-  actores: string[];
+  Titulo: string;
+  Lanzamiento: Date;
+  Director_es: string;
+  Actores: string[];
   descripcion: string
   img: string;
   link: string;
-  category: string;
+  Categoria: string;
 }

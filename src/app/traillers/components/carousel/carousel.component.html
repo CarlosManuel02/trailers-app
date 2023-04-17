@@ -9,8 +9,8 @@
     <div class="video-carousel">
       <div class="video-container" *ngFor="let video of trailer.trailer; let x =  index">
         <div class="vid-container" routerLink="../detail/{{video.id}}">
-          <img class="rounded" routerLink="../detail/{{video.id}}" width="360" height="215" [src]="video.img | safe" [alt]="video.titulo">
-          <p routerLink="../detail/{{video.id}}" class="text-center">{{video.titulo}}</p>
+          <img class="rounded" routerLink="../detail/{{video.id}}" width="360" height="215" [src]="video.img | safe" [alt]="video.Titulo">
+          <p routerLink="../detail/{{video.id}}" class="text-center">{{video.Titulo}}</p>
         </div>
       </div>
     </div>
