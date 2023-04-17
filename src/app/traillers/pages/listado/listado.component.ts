@@ -35,11 +35,11 @@ export class ListadoComponent {
       for (const trailerCategory of this.traillers) {
         const trailers = trailerCategory.trailer.filter(trailer =>
           trailer.Titulo.toLowerCase().includes(this.searchText.toLowerCase()) ||
-          trailer.Lanzamiento.getFullYear().toString().includes(this.searchText)
+          trailer.Lanzamiento.toString().includes(this.searchText)
         );
         if (trailers.length > 0) {
           this.foundTraillers.push({
-            category: trailerCategory.category,
+            Categoria: trailerCategory.Categoria,
             trailer: trailers
           });
         }

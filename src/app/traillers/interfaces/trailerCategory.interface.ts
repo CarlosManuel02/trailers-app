@@ -1,6 +1,6 @@
 import {Trailer} from "./category.interface";
 
 export interface TrailerCategory {
-  category: string;
+  Categoria: string;
   trailer: Trailer[];
 }

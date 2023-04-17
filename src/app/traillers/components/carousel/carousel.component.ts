@@ -1,12 +1,7 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
-import {Trailer} from "../../interfaces/category.interface";
+import {TrailerCategory} from "../../interfaces/trailerCategory.interface";
 
-
-interface TrailerCategory {
-  category: string;
-  trailer: Trailer[];
-}
 
 @Component({
   selector: 'app-carousel',

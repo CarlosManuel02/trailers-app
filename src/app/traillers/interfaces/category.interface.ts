@@ -1,8 +1,8 @@
 
 export interface Trailer {
-  _id?:         string;
+  _id:         string;
   Titulo:      string;
-  Lanzamiento: Date;
+  Lanzamiento: number;
   Director_es: string;
   Actores:     string[];
   img:         string;
@@ -10,4 +10,3 @@ export interface Trailer {
   link:        string;
   Categoria:   string;
 }
-

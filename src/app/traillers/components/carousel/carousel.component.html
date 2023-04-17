@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>{{trailer.category}}</h1>
+  <h1>{{trailer?.Categoria}}</h1>
 
   <div class="video-carousel-container" #carouselContainer>
     <button class="carousel-btn prev-btn" (click)="prev()">
@@ -7,7 +7,7 @@
     </button>
 
     <div class="video-carousel">
-      <div class="video-container" *ngFor="let video of trailer.trailer; let x =  index">
+      <div class="video-container" *ngFor="let video of trailer?.trailer; let x =  index">
         <div class="vid-container" routerLink="../detail/{{video._id}}">
           <img class="rounded" routerLink="../detail/{{video._id}}" width="360" height="215" [src]="video.img | safe" [alt]="video.Titulo">
           <p routerLink="../detail/{{video._id}}" class="text-center">{{video.Titulo}}</p>
