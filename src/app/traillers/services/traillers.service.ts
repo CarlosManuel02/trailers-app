@@ -12,7 +12,7 @@ export class TraillersService {
   private categories: TrailerCategory[] = []
   private _trailers: Trailer[] = [
     {
-      id: "1",
+      _id: "1",
       Titulo: "Spider-Man: No Way Home",
       Lanzamiento: new Date("2021-12-16"),
       link: "https://www.youtube.com/embed/ZhOHKJUPuFE",
@@ -23,7 +23,7 @@ export class TraillersService {
       img: "https://img.youtube.com/vi/ZhOHKJUPuFE/maxresdefault.jpg"
     },
     {
-      id: "2",
+      _id: "2",
       Titulo: "The Batman",
       Lanzamiento: new Date("2022-03-04"),
       link: "https://www.youtube.com/embed/Ue4PCI0NamI",
@@ -34,7 +34,7 @@ export class TraillersService {
       img: "https://img.youtube.com/vi/Ue4PCI0NamI/maxresdefault.jpg"
     },
     {
-      id: "3",
+      _id: "3",
       Titulo: "Jurassic World: Dominion",
       Lanzamiento: new Date("2022-06-10"),
       link: "https://www.youtube.com/embed/C7kbVvpOGdQ",
@@ -45,7 +45,7 @@ export class TraillersService {
       img: "https://img.youtube.com/vi/C7kbVvpOGdQ/maxresdefault.jpg"
     },
     {
-      id: "4",
+      _id: "4",
       Titulo: "Sonic The Hedgehog 2",
       Lanzamiento: new Date("2022-04-08"),
       link: "https://www.youtube.com/embed/QAvFV0v6Y-M",
@@ -56,7 +56,7 @@ export class TraillersService {
       img: "https://img.youtube.com/vi/QAvFV0v6Y-M/maxresdefault.jpg"
     },
     {
-      id: "5",
+      _id: "5",
       Titulo: "Doctor Strange in the Multiverse of Madness",
       Lanzamiento: new Date("2022-05-06"),
       link: "https://www.youtube.com/embed/8YjFbMbfXaQ",
@@ -67,7 +67,7 @@ export class TraillersService {
       img: "https://img.youtube.com/vi/8YjFbMbfXaQ/maxresdefault.jpg"
     },
     {
-      id: '6',
+      _id: '6',
       Titulo: 'Avengers: Infinity War',
       Lanzamiento: new Date('2018-04-26'),
       Director_es: 'Anthony Russo, Joe Russo',
@@ -93,7 +93,7 @@ export class TraillersService {
       Categoria: 'Acción'
     },
     {
-      id: '7',
+      _id: '7',
       Titulo: 'Avengers: Infinity War',
       Lanzamiento: new Date('2018-04-26'),
       Director_es: 'Anthony Russo, Joe Russo',
@@ -119,7 +119,7 @@ export class TraillersService {
       Categoria: 'Acción'
     },
     {
-      id: '8',
+      _id: '8',
       Titulo: 'Avengers: Infinity War',
       Lanzamiento: new Date('2018-04-26'),
       Director_es: 'Anthony Russo, Joe Russo',
@@ -145,7 +145,7 @@ export class TraillersService {
       Categoria: 'Acción'
     },
     {
-      id: '9',
+      _id: '9',
       Titulo: 'Avengers: Infinity War',
       Lanzamiento: new Date('2018-04-26'),
       Director_es: 'Anthony Russo, Joe Russo',
@@ -171,7 +171,7 @@ export class TraillersService {
       Categoria: 'Acción'
     },
     {
-      id: '10',
+      _id: '10',
       Titulo: 'Avengers: Infinity War',
       Lanzamiento: new Date('2018-04-26'),
       Director_es: 'Anthony Russo, Joe Russo',
@@ -199,7 +199,9 @@ export class TraillersService {
   ];
 
 
-  constructor(private http: HttpClient) {
+   constructor(private http: HttpClient) {
+    this.getAllTrailers()
+
     this._trailers.forEach(trailer => {
       const category = this.categories.find((item) => item.category === trailer.Categoria);
       if (category) {
@@ -211,6 +213,7 @@ export class TraillersService {
         });
       }
     });
+
   }
 
   get trailers() {
@@ -224,12 +227,15 @@ export class TraillersService {
   getTrailers(category: string) {
   }
 
-  getAllTrailers() {
+   getAllTrailers() {
+    this.http.get<Trailer[]>('http://localhost:3000/peliculas/all').subscribe((data) => {
+      console.log(data)
+    });
 
   }
 
   getTrailerById(id: string) {
-    return this._trailers.find(trailer => trailer.id === id)
+    return this._trailers.find(trailer => trailer._id === id)
   }
 
   addTrailer(category: string, trailer: string) {
