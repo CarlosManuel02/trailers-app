@@ -20,8 +20,11 @@ export class AgregarEditarComponent {
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(params => {
-        this.trailer = this.ts.getTrailerById(params['id'])
-
+        this.ts.getTrailerById(params['id'])
+          .subscribe((data) => {
+            this.trailer = data;
+            console.log(this.trailer)
+          })
       })
   }
 }

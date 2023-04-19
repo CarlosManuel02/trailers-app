@@ -10,7 +10,25 @@ import {map} from "rxjs/operators";
 export class TraillersService {
 
   trailerCategory: TrailerCategory[] = []
-  private _trailers: Trailer[] = []
+  private _trailers: Trailer[] = [
+    {
+      "_id": "643c58ee6e8599bf0b9b37a8",
+      "Titulo": "Ant-Man y la Avispa: Quantumanía",
+      "Lanzamiento": 2023,
+      "Director_es": "Peyton Reed",
+      "Actores": [
+        "Paul Rudd",
+        "Evangeline Lilly",
+        "Michael Douglas",
+        "Michelle Pfeiffer",
+        "Jonathan Majors"
+      ],
+      "img": "https://www.gstatic.com/tv/thumb/movieposters/23566152/p23566152_p_v8_ac.jpg",
+      "descripcion": "En la tercera entrega de la saga de Ant-Man, el equipo se enfrenta a nuevos desafíos mientras exploran el Reino Cuántico.",
+      "link": "https://www.youtube.com/watch?v=kk8GJZbwoWs",
+      "Categoria": "Ant-Man y la Avispa: Quantumanía"
+    }
+  ]
 
   constructor(private http: HttpClient) {
     this.getAllTrailers()
@@ -33,10 +51,18 @@ export class TraillersService {
 
 
   getTrailerById(id: string) {
-    return this._trailers.find(trailer => trailer._id === id)
+    return this.http.get<Trailer>(`http://localhost:3000/peliculas/${id}`)
+
   }
 
-  addTrailer(category: string, trailer: string) {
+  addTrailer(trailer: Trailer) {
+    return this.http.post(`http://localhost:3000/peliculas/add`, {trailer})
+      .pipe(
+        map((data: any) => {
+          console.log(data)
+          return data;
+        }
+      ))
   }
 
   deleteTrailer(category: string, id: string) {
@@ -44,7 +70,6 @@ export class TraillersService {
   }
 
   updateTrailer(category: string, id: string, trailer: string) {
-
   }
 
   private getCategories(_trailers: Trailer[]) {

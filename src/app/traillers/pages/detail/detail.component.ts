@@ -15,13 +15,17 @@ export class DetailComponent implements OnInit {
               private ts: TraillersService,
   ) {
   }
+
   trailer: Trailer | undefined;
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(params => {
-        this.trailer = this.ts.getTrailerById(params['id'])
-
+        this.ts.getTrailerById(params['id'])
+          .subscribe((data) => {
+            this.trailer = data;
+            console.log(this.trailer)
+          })
       })
   }
 
