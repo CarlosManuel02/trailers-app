@@ -1,0 +1,22 @@
+<div class="row container-fluid">
+
+
+
+
+  <div class="row row-cols-3" *ngFor="let trailerCategory of traillers">
+    <div *ngFor="let trailer of trailerCategory.trailer">
+      <div class="t-container col-lg-3 col-md-4 col-sm-5 col-6 col rounded me-3">
+        <img width="290" height="215"
+             [src]="trailer.img | safe"
+             class="rounded-2 mt-2"
+             [alt]="trailer.Titulo"
+             routerLink="../edit-update/{{trailer._id}}">
+        <h4 class="d-flex">
+          <span class="badge ">{{trailer.Titulo}}</span>
+          <small class="badge text-white">{{trailer.Lanzamiento}}</small>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+</div>
