@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: ''
+  baseUrl: 'https://p-web-api.up.railway.app/'
 };
 
 /*
