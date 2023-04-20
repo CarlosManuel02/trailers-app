@@ -41,8 +41,19 @@ export class AgregarEditarComponent implements OnInit {
         this.ts.getTrailerById(params['id'])
           .subscribe((data) => {
             this.trailer = data;
-            // console.log(this.trailer)
-          })
-      })
+            console.log(this.trailer);
+          });
+      });
   }
+
+  submitTrailerForm() {
+    this.ts.addTrailer(this.trailer!)
+      .subscribe((data) => {
+        console.log(data);
+      })
+
+    console.log(this.trailer)
+  }
+
+
 }

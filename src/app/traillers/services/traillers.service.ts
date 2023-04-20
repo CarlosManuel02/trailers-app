@@ -56,13 +56,20 @@ export class TraillersService {
   }
 
   addTrailer(trailer: Trailer) {
-    return this.http.post(`http://localhost:3000/peliculas/add`, {trailer})
-      .pipe(
-        map((data: any) => {
-          console.log(data)
-          return data;
-        }
-      ))
+
+    const newTrailer = {
+      Titulo: trailer.Titulo,
+      Lanzamiento: trailer.Lanzamiento,
+      Director_es: trailer.Director_es,
+      Actores: trailer.Actores,
+      img: trailer.img,
+      descripcion: trailer.descripcion,
+      link: trailer.link,
+      Categoria: trailer.Categoria
+    }
+
+    return this.http.post('http://localhost:3000/peliculas/add', newTrailer)
+
   }
 
   deleteTrailer(category: string, id: string) {

@@ -1,9 +1,18 @@
 <div class="row container-fluid">
+  <div class="col">
+    <h1>
+      <span class="badge badge-secondary">Trailers</span>
+    </h1>
+
+    <input type="text"
+           class="form-control"
+           placeholder="Search"
+           autofocus
+           [(ngModel)]="searchText"
+            (keyup)="search(searchText)">
 
 
-
-
-  <div class="row row-cols-3" *ngFor="let trailerCategory of traillers">
+    <div class="row row-cols-3" *ngFor="let trailerCategory of traillers">
     <div *ngFor="let trailer of trailerCategory.trailer">
       <div class="t-container col-lg-3 col-md-4 col-sm-5 col-6 col rounded me-3">
         <img width="290" height="215"

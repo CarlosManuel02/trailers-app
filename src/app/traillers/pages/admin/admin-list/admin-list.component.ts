@@ -11,6 +11,7 @@ import {Router} from "@angular/router";
 export class AdminListComponent {
 
   traillers: TrailerCategory[] = [];
+  searchText: string = '';
 
   constructor(
     private ts: TraillersService,
@@ -21,5 +22,11 @@ export class AdminListComponent {
 
   createTrailers() {
     this.router.navigate(['/traillers/admin/edit-update/0']);
+  }
+
+  search(searchText: string) {
+    this.searchText = searchText;
+
+
   }
 }
