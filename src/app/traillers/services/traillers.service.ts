@@ -66,12 +66,6 @@ export class TraillersService {
 
   }
 
-  deleteTrailer(category: string, id: string) {
-
-  }
-
-  updateTrailer(category: string, id: string, trailer: string) {
-  }
 
   private getCategories(_trailers: Trailer[]) {
     _trailers.forEach(trailer => {
