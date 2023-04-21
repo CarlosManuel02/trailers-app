@@ -31,7 +31,7 @@ export class AgregarEditarComponent implements OnInit {
 
 
   ngOnInit() {
-    if (!this.router.url.includes('editar')) {
+    if (!this.router.url.includes('edit')) {
       return;
     }
 
