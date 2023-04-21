@@ -34,6 +34,7 @@ export class AuthService {
           localStorage.setItem('token', JSON.stringify(resp));
         }
       )
+    this.user.isAdmin = true;
     return this.user;
 
   }
@@ -50,12 +51,13 @@ export class AuthService {
           localStorage.setItem('token', JSON.stringify(resp));
         }
       )
+    this.user.isAdmin = true;
     return this.user;
   }
 
   validateAdminAndToken() {
     return new Observable<boolean>(observer => {
-      if (this.user.isAdmin) {
+      if (!this.user.isAdmin) {
         console.log("You are an ADMIN")
         observer.next(true);
         observer.complete();
