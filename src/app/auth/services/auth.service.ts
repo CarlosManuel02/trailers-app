@@ -1,19 +1,25 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() {
+  constructor(
+    private http: HttpClient,
+  ) {
+    localStorage.getItem('token') && (this.user = JSON.parse(localStorage.getItem('token')!));
   }
 
-  private user = {
-    userName: 'asas',
+  api = environment.baseUrl;
+
+  private user: any = {
+    name: 'asas',
     email: '1234@test.test',
     password: 123456,
-    token: '123456789',
     isAdmin: true
   }
 
@@ -22,15 +28,29 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    console.log('login');
+    this.http.post(`${this.api}auth/`, {email, password})
+      .subscribe(resp => {
+          this.user = resp;
+          localStorage.setItem('token', JSON.stringify(resp));
+        }
+      )
+    return this.user;
+
   }
 
   logout() {
     console.log('logout');
   }
 
-  register(name: string, email: string, password: string) {
-    console.log('register');
+  register(nombre: string, email: string, password: string) {
+    const isAdmin = false;
+    this.http.post(`${this.api}auth/new`, {nombre, email, password, isAdmin})
+      .subscribe(resp => {
+          this.user = resp;
+          localStorage.setItem('token', JSON.stringify(resp));
+        }
+      )
+    return this.user;
   }
 
   validateAdminAndToken() {

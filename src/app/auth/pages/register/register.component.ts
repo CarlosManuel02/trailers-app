@@ -71,8 +71,11 @@ export class RegisterComponent {
 
   register() {
     const {username, email, password} = this.registerForm.value;
-    this.authService.register(username!, email!, password!);
-    this.router.navigateByUrl('/traillers/home');
+    const navegate = this.authService.login(email!, password!)
+
+    if (navegate){
+      this.router.navigateByUrl('/traillers/home');
+    }
 
   }
 

@@ -68,8 +68,11 @@ export class LoginComponent {
 
   login() {
     const {email, password, remember} = this.loginForm.value;
-    this.authService.login(email!, password!);
-    this.router.navigateByUrl('/traillers/home');
+    const navegate = this.authService.login(email!, password!)
+
+    if (navegate){
+      this.router.navigateByUrl('/traillers/home');
+    }
   }
 
 }
